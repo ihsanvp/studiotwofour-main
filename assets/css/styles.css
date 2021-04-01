@@ -6,6 +6,12 @@
 
   --text: #363636;
 }
+
+button:focus,
+button:active {
+  outline: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -34,11 +40,6 @@ h3.heading__main {
 
 p {
   font-size: clamp(16px, 2vw, 22px);
-  color: var(--text);
-  font-family: museo_sans100;
-}
-
-button:focus {
   outline: none;
   border: none;
 }
