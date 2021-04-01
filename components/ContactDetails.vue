@@ -22,7 +22,7 @@
     <p class="locations text-center">INDIA | UAE | QATAR | KSA | MALAYSIA</p>
     <ul class="box__social mb-10">
       <li v-for="social in socialLinks" :key="social.icon">
-        <a href @click.prevent>
+        <a :href="social.url" target="_blank">
           <i :class="social.icon"></i>
         </a>
       </li>
@@ -37,11 +37,11 @@ export default {
       socialLinks: [
         {
           icon: 'fab fa-instagram',
-          url: '',
+          url: 'https://www.instagram.com/studio.twofour/?hl=en',
         },
         {
           icon: 'fab fa-linkedin',
-          url: '',
+          url: 'https://www.linkedin.com/company/studio-twofour',
         },
         {
           icon: 'fab fa-twitter',
@@ -53,11 +53,12 @@ export default {
         },
         {
           icon: 'fab fa-youtube',
-          url: '',
+          url: 'https://www.youtube.com/channel/UCQ-2prT1D0_y9e094_jQ83g',
         },
         {
           icon: 'fab fa-facebook',
-          url: '',
+          url:
+            'https://www.facebook.com/Studio-twofour-Creative-Technolab-111129727740896/',
         },
       ],
     }
