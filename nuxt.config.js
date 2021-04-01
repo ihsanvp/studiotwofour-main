@@ -61,6 +61,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
+    '@nuxtjs/pwa',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -73,6 +74,66 @@ export default {
       target: 'https://studiotwofour-cms.herokuapp.com',
       pathRewrite: { '^/api/': '' },
     },
+  },
+
+  pwa: {
+    meta: {
+      theme_color: '#320037',
+      ogHost: 'studiotwofour.com',
+      nativeUI: true,
+      mobileApp: true,
+      mobileAppIOS: true,
+      name: 'Studio twofour',
+    },
+    manifest: {
+      lang: 'en',
+      theme_color: '#320037',
+      name: 'Studio twofour',
+      short_name: 'S24',
+    },
+    // workbox: {
+    //   offlineAssets: [
+    //     '@/assets/css/styles.css',
+    //     '@/assets/logo.png',
+    //     '@/assets/videos/teaser.mp4',
+
+    //     '@/assets/img/about/Lab_rect.png',
+    //     '@/assets/img/about/Lab2.png',
+    //     '@/assets/img/about/Philo_BG.png',
+    //     '@/assets/img/about/Philo2.png',
+    //     '@/assets/img/about/Philotr.png',
+
+    //     '@/assets/img/contact/Call.png',
+    //     '@/assets/img/contact/Mail.png',
+    //     '@/assets/img/contact/QA_slide.jpg',
+
+    //     '@/assets/img/portfolio/1.png',
+    //     '@/assets/img/portfolio/2.png',
+    //     '@/assets/img/portfolio/3.png',
+    //     '@/assets/img/portfolio/4.jpg',
+    //     '@/assets/img/portfolio/5.jpg',
+    //     '@/assets/img/portfolio/6.png',
+    //     '@/assets/img/portfolio/7.png',
+    //     '@/assets/img/portfolio/8.png',
+    //     '@/assets/img/portfolio/9.jpg',
+
+    //     '@/assets/img/services/card-icon-1.png',
+    //     '@/assets/img/services/card-icon-2.png',
+    //     '@/assets/img/services/card-icon-3.png',
+    //     '@/assets/img/services/card-icon-4.png',
+    //     '@/assets/img/services/card-icon-5.png',
+    //     '@/assets/img/services/card-icon-6.png',
+
+    //     '@/assets/img/slides/1.jpg',
+    //     '@/assets/img/slides/2.jpg',
+    //     '@/assets/img/slides/3.jpg',
+
+    //     '@/assets/img/work/VR_3.png',
+    //     '@/assets/img/work/VR_3D.png',
+    //     '@/assets/img/work/VR_360.png',
+    //     '@/assets/img/work/VR_BG.jpg',
+    //   ],
+    // },
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
