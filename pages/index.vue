@@ -1,5 +1,8 @@
 <template>
   <div id="home-page">
+    <!-- Teaser Video -->
+    <teaser-video></teaser-video>
+    <!-- End Teaser Video -->
     <!-- Header -->
     <header class="header__main" :class="{ header__hidden: !header }">
       <v-container class="nav__align full">
@@ -696,8 +699,12 @@
 <script>
 import axios from 'axios'
 import AOS from 'aos'
+import TeaserVideo from '@/components/TeaserVideo.vue'
 
 export default {
+  components: {
+    TeaserVideo,
+  },
   layout: 'Main',
   head() {
     return {
