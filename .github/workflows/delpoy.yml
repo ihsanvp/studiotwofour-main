@@ -17,11 +17,9 @@ jobs:
       - name: Build dist
         working-directory: main
         run: |
-         npm ci
-         npm run build
-         npm run generate
-        run: |
-          pwd
+          npm ci
+          npm run build
+          npm run generate
       - uses: actions/checkout@v2
         with:
           path: static
