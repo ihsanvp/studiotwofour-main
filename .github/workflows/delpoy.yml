@@ -19,6 +19,6 @@ jobs:
       # - run: npm run generate
       - run: pwd
       - run: ls
-      - run: cd ..
+      - run: cd main
       - run: pwd
       - run: ls
