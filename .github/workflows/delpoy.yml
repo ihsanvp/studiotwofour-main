@@ -21,6 +21,8 @@ jobs:
           npm run build
           npm run generate
       - uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: 'dist'
           destination-github-username: 'ihsanvp'
