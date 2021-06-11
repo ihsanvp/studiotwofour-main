@@ -1,0 +1,20 @@
+name: Studiotwofour Continous Deployment
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on:
+      steps:
+        - uses: actions/checkout@master
+        - uses: actions/setup-node@master
+          with:
+            node-version: 12
+        - run: npm ci
+        - run: npm run build
+        - run: npm run generate
+        - run: pwd
+        - run: cd ..
+        - run: pwd
