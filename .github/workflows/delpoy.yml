@@ -24,12 +24,11 @@ jobs:
         with:
           path: static
           repository: ihsanvp/studiotwofour-public
-
-      # - name: Copy dist
-      #   run: cp -TRv ./main/dist ./static
-      # - name: Push repository
-      #   working-directory: static
-      #   run: |
-      #     git add --all
-      #     git commit -m 'deploy'
-      #     git push
+      - name: Copy dist
+        run: cp -TRv ./main/dist ./static
+      - name: Push repository
+        working-directory: static
+        run: |
+          git add --all
+          git commit -m 'deploy'
+          git push
