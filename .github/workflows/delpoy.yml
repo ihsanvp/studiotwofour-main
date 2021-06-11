@@ -14,13 +14,23 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-      - name: Build
+      - name: Build dist
         working-directory: main
-        # run: |
-        #  npm ci
-        #  npm run build
-        #  npm run generate
+        run: |
+         npm ci
+         npm run build
+         npm run generate
         run: |
           pwd
-      - name: Copy
-        run: pwd
+      - uses: actions/checkout@v2
+        with:
+          path: static
+          repository: ihsanvp/studiotwofour-public
+      - name: Copy dist
+        run: cp -TRv ./main/dist ./static
+      - name: Push repository
+        working-directory: static
+        run: |
+          git add --all
+          git commit -m 'deploy'
+          git push
