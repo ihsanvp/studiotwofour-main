@@ -16,9 +16,10 @@ jobs:
           node-version: 12
       - name: Build
         working-directory: main
-      # - run: npm ci
-      # - run: npm run build
-      # - run: npm run generate
-        run: pwd
-        run: cd ..
-        run: pwd
+        # - run: npm ci
+        # - run: npm run build
+        # - run: npm run generate
+        run: |
+          pwd
+          cd ..
+          pwd
