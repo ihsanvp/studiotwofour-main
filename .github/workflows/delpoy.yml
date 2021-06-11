@@ -9,28 +9,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: main
+        # with:
+        #   path: main
       - uses: actions/setup-node@master
         with:
           node-version: 12
       - name: Build dist
-        working-directory: main
+        # working-directory: main
         run: |
           npm ci
           npm run build
           npm run generate
-      - uses: actions/checkout@v2
+      - uses: cpina/github-action-push-to-another-repository@main
         with:
-          path: static
-          repository: ihsanvp/studiotwofour-public
-      - name: Copy dist
-        run: cp -TRv ./main/dist ./static
-      - name: Push repository
-        working-directory: static
-        run: |
-          git config --local user.name "ihsanvp"
-          git config --local user.email "ihsanvp2738@gmail.com"
-          git add --all
-          git commit -m 'deploy'
-          git push
+          source-directory: 'dist'
+          destination-github-username: 'ihsanvp'
+          destination-repository-name: 'studiotwofour-public'
+          user-email: ihsanvp2738@gmail.com
+          target-branch: main
+      # - uses: actions/checkout@v2
+      #   with:
+      #     path: static
+      #     repository: ihsanvp/studiotwofour-public
+      # - name: Copy dist
+      #   run: cp -TRv ./main/dist ./static
+      # - name: Push repository
+      #   working-directory: static
+      #   run: |
+      #     git config --local user.name "ihsanvp"
+      #     git config --local user.email "ihsanvp2738@gmail.com"
+      #     git add --all
+      #     git commit -m 'deploy'
+      #     git push
