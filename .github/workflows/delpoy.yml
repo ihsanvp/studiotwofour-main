@@ -24,9 +24,7 @@ jobs:
         with:
           path: static
           repository: ihsanvp/studiotwofour-public
-        run: |
-          pwd
-          ls
+
       # - name: Copy dist
       #   run: cp -TRv ./main/dist ./static
       # - name: Push repository
