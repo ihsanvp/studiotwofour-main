@@ -22,3 +22,6 @@ jobs:
       - run: cd main
       - run: pwd
       - run: ls
+      - working-directory: main
+      - run: pwd
+      - run: ls
