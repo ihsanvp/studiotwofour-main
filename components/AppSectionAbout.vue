@@ -11,7 +11,7 @@
                 :data-aos="aboutAnimation"
                 data-aos-duration="1000"
               >
-                Creative
+                Creative new
                 <br />Technolab
               </h1>
               <h3
