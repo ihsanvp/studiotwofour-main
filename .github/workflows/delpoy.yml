@@ -29,6 +29,8 @@ jobs:
       - name: Push repository
         working-directory: static
         run: |
+          git config --local user.name "ihsanvp"
+          git config --local user.email "ihsanvp2738@gmail.com"
           git add --all
           git commit -m 'deploy'
           git push
