@@ -8,16 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Main Code
+      - uses: actions/checkout@v2
+        with:
+          path: main
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - name: Build
         working-directory: main
-        uses: actions/checkout@v2
-        # - uses: actions/setup-node@master
-        #   with:
-        #     node-version: 12
-        # - run: npm ci
-        # - run: npm run build
-        # - run: npm run generate
-      - name: See Info
-        run: |
-          pwd
-          ls
+      # - run: npm ci
+      # - run: npm run build
+      # - run: npm run generate
+        run: pwd
+        run: cd ..
+        run: pwd
