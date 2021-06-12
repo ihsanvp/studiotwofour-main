@@ -29,17 +29,3 @@ jobs:
           destination-repository-name: 'studiotwofour-public'
           user-email: ihsanvp2738@gmail.com
           target-branch: main
-      # - uses: actions/checkout@v2
-      #   with:
-      #     path: static
-      #     repository: ihsanvp/studiotwofour-public
-      # - name: Copy dist
-      #   run: cp -TRv ./main/dist ./static
-      # - name: Push repository
-      #   working-directory: static
-      #   run: |
-      #     git config --local user.name "ihsanvp"
-      #     git config --local user.email "ihsanvp2738@gmail.com"
-      #     git add --all
-      #     git commit -m 'deploy'
-      #     git push
